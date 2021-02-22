@@ -1,0 +1,47 @@
+﻿@page "/view-report"
+@page "/view-report/{id:int}"
+@using System.Linq
+@inject IJSRuntime jsRuntime
+
+
+@if (!string.IsNullOrEmpty(reporturl))
+{
+<iframe id="report-frame" style="overflow:hidden;width:100%" height="836" width="100%" src="@reporturl" frameborder="0" allowFullScreen="true"></iframe>
+}
+else
+{
+<p>No report loaded.</p>
+}
+
+@code{
+    [Parameter]
+    public int Id { get; set; }
+
+    string reporturl;
+    protected override async Task OnInitializedAsync()
+    {
+        //LoadReport();  
+        //await jsRuntime.InvokeAsync<object>("reloadIframe","report-frame", reporturl);
+    }
+
+    void LoadReport(){
+         var sel = AppConstants.Reports.Where(x => x.No == Id).FirstOrDefault();
+        if (sel != null)
+            reporturl = sel.ReportUrl;
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+
+        }else{
+           
+        }
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        Console.WriteLine("parameter reload..");
+        LoadReport();
+    }
+}

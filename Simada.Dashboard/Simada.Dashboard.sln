@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simada.Dashboard", "Simada.Dashboard\Simada.Dashboard.csproj", "{2F065129-C8D5-4791-A8EC-BBF61BCC75BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F065129-C8D5-4791-A8EC-BBF61BCC75BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F065129-C8D5-4791-A8EC-BBF61BCC75BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F065129-C8D5-4791-A8EC-BBF61BCC75BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F065129-C8D5-4791-A8EC-BBF61BCC75BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {99AC187B-F1ED-4918-B67A-059FBDB298A8}
+	EndGlobalSection
+EndGlobal

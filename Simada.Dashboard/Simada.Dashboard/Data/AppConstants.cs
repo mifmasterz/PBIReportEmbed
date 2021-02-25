@@ -7,9 +7,45 @@ namespace Simada.Dashboard.Data
 {
     public class AppConstants
     {
+        public static string[] Propinsis = new string[] {
+            "ACEH",
+            "SUMATERA UTARA",
+            "SUMATERA BARAT",
+            "RIAU",
+            "JAMBI",
+            "SUMATERA SELATAN",
+            "BENGKULU",
+            "LAMPUNG",
+            "KEPULAUAN BANGKA BELITUNG",
+            "KEPULAUAN RIAU",
+            "DKI JAKARTA",
+            "JAWA BARAT",
+            "JAWA TENGAH",
+            "BANTEN",
+            "JAWA TIMUR",
+            "D.I. YOGYAKARTA",
+            "BALI",
+            "NUSA TENGGARA BARAT",
+            "NUSA TENGGARA TIMUR",
+            "KALIMANTAN BARAT",
+            "KALIMANTAN TENGAH",
+            "KALIMANTAN SELATAN",
+            "KALIMANTAN TIMUR",
+            "KALIMANTAN UTARA",
+            "SULAWESI UTARA",
+            "SULAWESI TENGAH",
+            "SULAWESI SELATAN",
+            "SULAWESI TENGGARA",
+            "GORONTALO",
+            "SULAWESI BARAT",
+            "MALUKU",
+            "MALUKU UTARA",
+            "PAPUA",
+            "PAPUA BARAT"
+        };
         public static List<Report> Reports = new List<Report> { 
-        new Report (){ No=1, Title= "Apotek",  ReportUrl="https://app.powerbi.com/view?r=eyJrIjoiNWZkNTJiYjgtNjBhYi00YWQ5LWJmNWEtOWY5MDgwNDdiZDM4IiwidCI6IjViMWZiNWUxLTU4ODEtNGQwNC1iMmIwLWQ4ZDk4YWNmNGZkMiIsImMiOjEwfQ%3D%3D",Parameters=new string[]{ }  },
-        new Report (){ No=2, Title= "IKOT",  ReportUrl="https://app.powerbi.com/view?r=eyJrIjoiODYwY2U3ZGItNDY4OS00YzFhLTllMzUtOWVjMTgzNWY0NzlmIiwidCI6IjViMWZiNWUxLTU4ODEtNGQwNC1iMmIwLWQ4ZDk4YWNmNGZkMiIsImMiOjEwfQ%3D%3D",Parameters=new string[]{ }  },
+        new Report (){ No=1, Title= "Apotek",  ReportUrl="https://app.powerbi.com/view?r=eyJrIjoiNWZkNTJiYjgtNjBhYi00YWQ5LWJmNWEtOWY5MDgwNDdiZDM4IiwidCI6IjViMWZiNWUxLTU4ODEtNGQwNC1iMmIwLWQ4ZDk4YWNmNGZkMiIsImMiOjEwfQ%3D%3D",Parameters=new string[]{  }  },
+        new Report (){ No=2, Title= "IKOT",  ReportUrl="https://app.powerbi.com/view?r=eyJrIjoiODYwY2U3ZGItNDY4OS00YzFhLTllMzUtOWVjMTgzNWY0NzlmIiwidCI6IjViMWZiNWUxLTU4ODEtNGQwNC1iMmIwLWQ4ZDk4YWNmNGZkMiIsImMiOjEwfQ%3D%3D",Parameters=new string[]{  }  },
         new Report (){ No=3, Title= "Industri Farmasi",  ReportUrl="https://app.powerbi.com/view?r=eyJrIjoiZWQ2ZWMwOWQtOGFmOC00YjczLWE3ZWItZjk5NTdhMjhlOWUzIiwidCI6IjViMWZiNWUxLTU4ODEtNGQwNC1iMmIwLWQ4ZDk4YWNmNGZkMiIsImMiOjEwfQ%3D%3D",Parameters=new string[]{ }  },
         new Report (){ No=4, Title= "IOT",  ReportUrl="https://app.powerbi.com/view?r=eyJrIjoiZTM3NjE3YWItZjhkZS00MmY5LWFlOTYtYzIxNDQxOGU0YjhiIiwidCI6IjViMWZiNWUxLTU4ODEtNGQwNC1iMmIwLWQ4ZDk4YWNmNGZkMiIsImMiOjEwfQ%3D%3D",Parameters=new string[]{ }  },
         new Report (){ No=5, Title= "Industri Kosmetik",  ReportUrl="https://app.powerbi.com/view?r=eyJrIjoiODAyMGFhMDItODIyOS00NWM1LTgzZGEtYWVhMGMyNWFhZTFkIiwidCI6IjViMWZiNWUxLTU4ODEtNGQwNC1iMmIwLWQ4ZDk4YWNmNGZkMiIsImMiOjEwfQ%3D%3D",Parameters=new string[]{ }  },
@@ -21,7 +57,7 @@ namespace Simada.Dashboard.Data
         new Report (){ No=11, Title= "Produksi PKRT",  ReportUrl="https://app.powerbi.com/view?r=eyJrIjoiM2RlYjczOTUtMDBmNS00OTc2LThkNWUtNzg3ZjJjODU1YzVkIiwidCI6IjViMWZiNWUxLTU4ODEtNGQwNC1iMmIwLWQ4ZDk4YWNmNGZkMiIsImMiOjEwfQ%3D%3D",Parameters=new string[]{ }  },
         new Report (){ No=12, Title= "Produsen RTASLKESPKRT",  ReportUrl="https://app.powerbi.com/view?r=eyJrIjoiZGEzYjNiZTgtODcyZS00MmU2LWJhYWYtMzkxZTYxNDAwMzE1IiwidCI6IjViMWZiNWUxLTU4ODEtNGQwNC1iMmIwLWQ4ZDk4YWNmNGZkMiIsImMiOjEwfQ%3D%3D",Parameters=new string[]{ }  },
      
-        new Report (){ No=13, Title= "Toko Alkes",  ReportUrl="https://app.powerbi.com/view?r=eyJrIjoiZDAzZjU0YjYtZjZlMC00MGZkLWEyNjEtZGFmYzllM2RhYTk3IiwidCI6IjViMWZiNWUxLTU4ODEtNGQwNC1iMmIwLWQ4ZDk4YWNmNGZkMiIsImMiOjEwfQ%3D%3D",Parameters=new string[]{ }  },
+        new Report (){ No=13, Title= "Toko Alkes",  ReportUrl="https://app.powerbi.com/reportEmbed?reportId=cc6e649a-e704-48e4-88c2-806f2e1b3971&autoAuth=true",Parameters=new string[]{"&filter=historytokoalkes/provinsi eq '{0}'" }  },
         new Report (){ No=14, Title= "Toko Obat",  ReportUrl="https://app.powerbi.com/view?r=eyJrIjoiOWI3ZGNkNDMtNTYwYS00MWQ1LWJjYmQtY2Q2YmZjZWY1NTE2IiwidCI6IjViMWZiNWUxLTU4ODEtNGQwNC1iMmIwLWQ4ZDk4YWNmNGZkMiIsImMiOjEwfQ%3D%3D",Parameters=new string[]{ }  },
 
         };

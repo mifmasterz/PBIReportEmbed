@@ -3,9 +3,23 @@
 @using System.Linq
 @inject IJSRuntime jsRuntime
 
+@if(selReport!=null && selReport.Parameters.Length>0){
+    <div class="form-group">
+    <label for="propinsi">Propinsi</label>
+    <select @bind="selPropinsi" id="propinsi">
+                            <option value="">Pilih</option>
+                            @foreach(var item in AppConstants.Propinsis){
+                            <option value="@item">@item</option>
+                            }
 
-@if (!string.IsNullOrEmpty(reporturl))
-{
+                        </select>
+    </div>
+}
+
+@if (selReport!=null)
+{    
+    reporturl =string.IsNullOrEmpty( selPropinsi) ? selReport.ReportUrl  : selReport.ReportUrl + string.Format(selReport.Parameters[0],selPropinsi);
+
 <iframe id="report-frame" style="overflow:hidden;width:100%" height="836" width="100%" src="@reporturl" frameborder="0" allowFullScreen="true"></iframe>
 }
 else
@@ -16,7 +30,8 @@ else
 @code{
     [Parameter]
     public int Id { get; set; }
-
+    string selPropinsi;
+    Report selReport;
     string reporturl;
     protected override async Task OnInitializedAsync()
     {
@@ -25,9 +40,8 @@ else
     }
 
     void LoadReport(){
-         var sel = AppConstants.Reports.Where(x => x.No == Id).FirstOrDefault();
-        if (sel != null)
-            reporturl = sel.ReportUrl;
+        selReport = AppConstants.Reports.Where(x => x.No == Id).FirstOrDefault();
+        
     }
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {

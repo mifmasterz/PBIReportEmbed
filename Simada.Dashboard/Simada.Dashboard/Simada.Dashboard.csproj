@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <None Include="libman.json" />
+    <None Include="wwwroot\assets\js\scripts.js" />
   </ItemGroup>
 
   <ItemGroup>

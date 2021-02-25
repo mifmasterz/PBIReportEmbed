@@ -1,29 +1,26 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">Simada.Dashboard</a>
-    <button class="navbar-toggler" @onclick="ToggleNavMenu">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-</div>
+﻿<ul class="fw-tree d-md-block d-none">
+    <li>
+        <a class="tree-item node-group">SARANA FARMASI</a>
+        <ul>
+            @foreach (var item in AppConstants.Reports)
+            {
+                string Url = $"/view-report/{item.No}";
+                <li><a href="@Url" class="tree-item node-item">@item.Title</a></li>
+            }
+        </ul>
+    </li>  
+    <li>
+        <a class="tree-item node-group">TENAGA</a>
+        <ul>
+            <li><a class="tree-item node-item">JENIS TENAGA</a></li>
+            <li><a class="tree-item node-item">PENDIDIKAN</a></li>
+            <li><a class="tree-item node-item">TEMPAT BEKERJA</a></li>
+            <li><a class="tree-item node-item">STATUS PEGAWAI</a></li>
+        </ul>
+    </li>
+</ul>
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <ul class="nav flex-column">
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </li>
-        @foreach(var item in AppConstants.Reports){
-             string Url = $"/view-report/{item.No}";
-             <li class="nav-item px-3">
-                <NavLink class="nav-link" href="@Url" >
-                    <span class="oi oi-plus" aria-hidden="true"></span> @item.Title
-                </NavLink>
-              </li>
-        }
-        
-       
-    </ul>
-</div>
+
 
 @code {
     private bool collapseNavMenu = true;

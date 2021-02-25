@@ -1,15 +1,91 @@
 ﻿@inherits LayoutComponentBase
+<div class="fw-page d-flex flex-column">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.htm">
+            <img src="assets/img/logo.png">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list"></i>
+        </button>
 
-<div class="sidebar">
-    <NavMenu />
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mt-3 mt-md-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-right text-md-left" href="#" id="navbarSaranaFarmasi" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SARANA FARMASI</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarSaranaFarmasi">
+                        <a class="dropdown-item text-right text-md-left" href="#">Action</a>
+                        <a class="dropdown-item text-right text-md-left" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-right text-md-left" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-right text-md-left" href="#" id="navbarInstalasiFarmasi" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">INSTALASI FARMASI</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarInstalasiFarmasi">
+                        <a class="dropdown-item text-right text-md-left" href="#">Action</a>
+                        <a class="dropdown-item text-right text-md-left" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-right text-md-left" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-right text-md-left" href="#" id="navbarDakFarmasi" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">DAK FARMASI</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDakFarmasi">
+                        <a class="dropdown-item text-right text-md-left" href="#">Action</a>
+                        <a class="dropdown-item text-right text-md-left" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-right text-md-left" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-right text-md-left" href="#" id="navbarTenagaFarmasi" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TENAGA FARMASI</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarTenagaFarmasi">
+                        <a class="dropdown-item text-right text-md-left" href="#">Action</a>
+                        <a class="dropdown-item text-right text-md-left" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-right text-md-left" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-right text-md-left" href="#" id="navbarLaporan">LAPORAN</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-right text-md-left" href="#" id="navbarDashboard" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">DASHBOARD</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDashboard">
+                        <a class="dropdown-item text-right text-md-left" href="#">Action</a>
+                        <a class="dropdown-item text-right text-md-left" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-right text-md-left" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-right text-md-left" href="#" id="navbarSettings" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SETTINGS</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarSettings">
+                        <a class="dropdown-item text-right text-md-left" href="#">Action</a>
+                        <a class="dropdown-item text-right text-md-left" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-right text-md-left" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="fw-container container-fluid mx-0 flex-fill">
+        <div class="row fw-inner">
+            <div class="fw-treemenu col-md-3 py-3">
+                <button class="btnToggleTree btn d-md-none d-block float-right"><i class="bi bi-three-dots-vertical"></i></button>
+                <div class="fw-breadcrumb d-md-none d-block"></div>
+                <NavMenu />
+            </div>
+            <div class="fw-content col-md-9 py-3">
+                @Body
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="main">
-    <div class="top-row px-4">
-        <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-    </div>
 
-    <div class="content px-4">
-        @Body
-    </div>
-</div>
+
+
+
+
